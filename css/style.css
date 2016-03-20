@@ -41,20 +41,25 @@ html, body {
 /******************************************************/
 
 /*********************** BODY *******************************/
-
+html {
+	margin: 0;
+}
 body {
-	background-image: url('../img/body.jpg');
-	background-attachment: fixed;
-	background-repeat: no-repeat;
-	opacity: 0.9;
-	background-size: cover;
+	background: #0a1720 url('../img/body.jpg') repeat 0 0;
+	height: 100%;
+	line-height: 1;
+	text-align: left;
+	margin: 0;
+	display: block;
 
 }
 
 #main-body {
+	/*
 	background-image: url('../img/body.jpg');
 	background-attachment: fixed;
 	background-repeat: no-repeat;
+	*/
 }
 
 .panel {
@@ -167,9 +172,13 @@ a:active {
 /**************************************************************************/
 
 /**************************** NAVBAR **************************************/
-.navbar {
-	border: none;
-	background: url('../img/containercorner7.png');
+
+#navbar-style {
+	margin: 0;
+	background: url('../img/navbarbackground.jpg');
+    padding: 15px;
+    border: 10px solid black;
+    border-image: url(../img/border-linelong.png) 25 25 round;
 }
 
 .dropdown {
@@ -245,10 +254,11 @@ li:hover ul#submenu {
 
 /**************************** CONTAINER **********************************/
 
-#container-one {
-	
-}
+#maincontainer {
+	border: none;
+	background-image: url('../img/background-container3.jpg'); 
 
+}
 /*************************************************************************/
 
 /**************************** HOVER MASTER *******************************/
@@ -320,4 +330,106 @@ li:hover ul#submenu {
     padding-bottom: 20px;
     border-bottom: 1px solid #000;
     background: #fff;
+}
+
+
+/***************************** sections ********************************************/
+
+section {
+	border: 1px solid #000;
+	margin: 0;
+	display: block;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: 0 0;
+    margin: 0;
+    padding: 0;
+}
+
+#main-section {
+	/* THIS IS THE HEIGHT OF THE SECTION, MAKE A @MEDIA THINGY FOR DIFFERENT DEVICES */
+	height: 500px;
+}
+
+#section-container {
+	background-image: url('../img/background-container1.jpg'); 
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat; 
+	background-size: cover;
+}
+
+#section-middle {
+	background-image: url('../img/background-container.jpg'); 
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+
+
+}
+/********************************************************************************/
+
+/****************************** CAROUSEL **************************************************/
+
+/* You can change the height of the carousel by changing the height in the class below. It is set to 50% by default, but can be any height! */
+
+.carousel {
+    height: 100%;
+}
+
+.item, .active, .carousel-inner {
+    height: 100%;
+}
+
+/* Background images are set within the HTML using inline CSS, not here */
+
+.fill {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+
+/******************************************************************************************/
+
+@media (min-top: 50px)
+.feature-block {
+	background: url(../img/break-left.png) left .5em no-repeat,url(../img/break-centre.png) center 0 no-repeat,url(../img/break-right.png) right .5em no-repeat,url(../img/break.jpg) 0 1.4em repeat-x;
+	padding-bottom: 1.4em;
+	position: relative;
+}
+
+.feature-block:after {
+	background: url(../img/break-left.png) left .5em no-repeat,url(../img/break-centre.png) center 0 no-repeat,url(../img/break-right.png) right .5em no-repeat,url(../img/break.jpg) 0 1.4em repeat-x;
+    bottom: -1.4em;
+    content: "";
+    height: 4.2em;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 55px;
+}
+
+.feature-block-container {
+	background: url(../img/break-left.png) left .5em no-repeat,url(../img/break-centre.png) center 0 no-repeat,url(../img/break-right.png) right .5em no-repeat,url(../img/break.jpg) 0 1.4em repeat-x;
+	padding-bottom: 1.4em;
+	position: relative;
+}
+
+.feature-block-container {
+	background: url(../img/break-left.png) left .5em no-repeat,url(../img/break-centre.png) center 0 no-repeat,url(../img/break-right.png) right .5em no-repeat,url(../img/break.jpg) 0 1.4em repeat-x;
+    bottom: -1.4em;
+    content: "";
+    height: 4.2em;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    top: 560px;
 }
